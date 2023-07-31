@@ -44,7 +44,7 @@ if battle:
     with col1:
         st.write("Player's Choice :")
         st.info(object1)
-        st.image(f'images/{object1.lower()}.png', width=200)
+        st.image(f'images/{object1.lower().replace(".", "")}.png', width=200)
 
     with col2:
         object2 = random.choice(objects)
@@ -53,7 +53,7 @@ if battle:
         with st.spinner('Processing...'):
             time.sleep(3)
         st.info(object2)
-        st.image(f'images/{object2.lower()}.png', width=200)
+        st.image(f'images/{object2.lower().replace(".", "")}.png', width=200)
 
     # get result of match
     result = get_response(f"match?object_one={object1}&object_two={object2}")
@@ -87,4 +87,4 @@ with st.sidebar:
     st.write('The API used for the object list and battle outcomes are from'
              ' [RPS101 API](https://rps101.pythonanywhere.com/api). ')
     st.write('Original idea, and all hand symbol artwork from [UMOP.COM](https://www.umop.com/rps101.htm)')
-    st.write('The source code for this app can be found on [GitHub]()')
+    st.write('The source code for this app can be found on [GitHub](https://github.com/dean-sequeira/rps-101)')
