@@ -3,6 +3,8 @@ from st_api_conn import APIConnection
 import random
 import time
 
+st.set_page_config(page_title="RPS101", page_icon="🤺")
+
 # session state for player score
 if 'player_score' not in st.session_state:
     st.session_state['player_score'] = 0
@@ -76,11 +78,18 @@ with st.sidebar:
     st.write('Choose an object, click the :red[**Battle**] button, see who wins. Repeat.')
 
     st.write('## Score')
-    st.write('Player 🧑‍🚀:')
-    st.info(st.session_state['player_score'])
-    st.write('Bot 🤖:')
-    st.info(st.session_state['computer_score'])
 
+    sd_col1, sd_col2 = st.columns(2)
+    with sd_col1:
+        st.write('Player 🧑‍🚀:')
+        st.info(st.session_state['player_score'])
+    with sd_col2:
+        st.write('Bot 🤖:')
+        st.info(st.session_state['computer_score'])
+
+    # add gap
+    st.write('')
+    st.divider()
     st.write('## About')
     st.write('This app is intended to demo the use of the Streamlit `experimental_connection` feature, using an API'
              ' `ExperimentalBaseConnection`.')
