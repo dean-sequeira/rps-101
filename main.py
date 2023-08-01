@@ -52,7 +52,7 @@ if battle:
         object2 = random.choice(objects)
         st.write("Bot's Choice :")
 
-        with st.spinner('Processing...'):
+        with st.spinner('`Analyzing..boop..evaluating..beep...`'):
             time.sleep(3)
         st.info(object2)
         st.image(f'images/{object2.lower().replace(".", "")}.png', width=200)
