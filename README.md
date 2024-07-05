@@ -1,7 +1,7 @@
 # RPS-101
 *Demo of `st.connections.ExperimentalBaseConnection` for API requests*
 
-Remake of [RPS-101](https://rps101.pythonanywhere.com) - Rock, Paper, Scissors if it had 101 objects instead of 3. RPS101 public API used to demonstrate a custom
+Remake of Rock, Paper, Scissors if it had 101 objects instead of 3. RPS101 public API used to demonstrate a custom
 Streamlit's `st.connections.ExperimentalBaseConnection`.
 
 
